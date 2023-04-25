@@ -270,7 +270,7 @@ spec:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
             runAsUser: 1001
-            runAsGroup: 2001
+#            runAsGroup: 2001
       volumes:
         - name: kubernetes-dashboard-certs
           secret:
@@ -344,7 +344,7 @@ spec:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
             runAsUser: 1001
-            runAsGroup: 2001
+#            runAsGroup: 2001
       serviceAccountName: kubernetes-dashboard
       nodeSelector:
         "kubernetes.io/os": linux
