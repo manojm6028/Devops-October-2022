@@ -341,7 +341,7 @@ spec:
               - key: node.ignite.harman.com/component
                 operator: In
                 values:
-                - api
+                - streaming
       containers:
         - name: dashboard-metrics-scraper
           image: kubernetesui/metrics-scraper:v1.0.8
