@@ -239,6 +239,15 @@ spec:
  #     securityContext:
  #       seccompProfile:
  #         type: RuntimeDefault
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node.ignite.harman.com/component
+                operator: In
+                values:
+                - api
       containers:
         - name: kubernetes-dashboard
           image: kubernetesui/dashboard:v2.7.0
@@ -324,6 +333,15 @@ spec:
 #      securityContext:
 #        seccompProfile:
 #          type: RuntimeDefault
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node.ignite.harman.com/component
+                operator: In
+                values:
+                - api
       containers:
         - name: dashboard-metrics-scraper
           image: kubernetesui/metrics-scraper:v1.0.8
