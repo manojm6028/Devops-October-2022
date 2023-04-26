@@ -247,7 +247,7 @@ spec:
               - key: node.ignite.harman.com/component
                 operator: In
                 values:
-                - api
+                - streaming
       containers:
         - name: kubernetes-dashboard
           image: kubernetesui/dashboard:v2.7.0
