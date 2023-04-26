@@ -236,9 +236,9 @@ spec:
       labels:
         k8s-app: kubernetes-dashboard
     spec:
- #     securityContext:
- #       seccompProfile:
- #         type: RuntimeDefault
+      securityContext:
+        seccompProfile:
+          type: RuntimeDefault
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -330,9 +330,9 @@ spec:
       labels:
         k8s-app: dashboard-metrics-scraper
     spec:
-#      securityContext:
-#        seccompProfile:
-#          type: RuntimeDefault
+      securityContext:
+        seccompProfile:
+          type: RuntimeDefault
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
